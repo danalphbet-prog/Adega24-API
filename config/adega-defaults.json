@@ -1,0 +1,206 @@
+{
+  "aparencia": {
+    "tema": "dark",
+    "corFundo": "#100e12",
+    "corPrincipal": "#e45c7a",
+    "corTexto": "#faf4f4",
+    "corSuperficie": "#19161c",
+    "corBorda": "#383039",
+    "corSecundaria": "#a99da6",
+    "arredondamentoPx": 19
+  },
+  "imagens": {
+    "logoUrl": "",
+    "fundoHeroUrl": "",
+    "imagemFundoUrl": ""
+  },
+  "icones": {
+    "marca": "✦",
+    "seloHero": "✦",
+    "destaque": "✳",
+    "selecao": "◇",
+    "pix": "▣",
+    "atualizacao": "↻",
+    "carrinho": "🛒",
+    "pedidos": "▤",
+    "botaoPrimario": "↗",
+    "botaoSecundario": "→"
+  },
+  "textos": {
+    "topoAviso": "Seu próximo brinde começa aqui",
+    "topoIdade": "Venda exclusiva para maiores de 18 anos",
+    "marcaSubtitulo": "SELEÇÃO DE BEBIDAS",
+    "hero": {
+      "selo": "BEM-VINDO À SUA ADEGA DIGITAL",
+      "titulo": "O melhor da noite começa",
+      "destaque": "aqui.",
+      "descricao": "Seus rótulos favoritos, energéticos e sabores especiais em um só lugar. Escolha, adicione ao carrinho e finalize com Pix.",
+      "legenda": "Uma seleção para todos os momentos",
+      "selecaoTitulo": "SELEÇÃO",
+      "selecaoDescricao": "Os seus favoritos",
+      "cardSelo": "PREMIUM PICKS",
+      "cardTexto": "Um brinde ao seu momento.",
+      "rodape": "A CURADORIA QUE COMBINA COM VOCÊ"
+    },
+    "vantagens": {
+      "titulo1": "Seleção especial",
+      "descricao1": "Seus rótulos preferidos",
+      "titulo2": "Pix na hora",
+      "descricao2": "QR Code no checkout",
+      "titulo3": "Atualizado ao vivo",
+      "descricao3": "Conheça nossa seleção"
+    },
+    "catalogo": {
+      "selo": "NOSSA CURADORIA",
+      "titulo": "Escolha o seu",
+      "destaque": "favorito.",
+      "descricao": "Do clássico ao diferente, tem sempre algo para o seu momento.",
+      "busca": "O que você está procurando?",
+      "todos": "Todos os produtos",
+      "semResultados": "Nenhum produto encontrado",
+      "precoIndisponivel": "Preço em breve",
+      "etiquetaPreco": "PREÇO",
+      "slogan": "ESCOLHA • ADICIONE • BRINDE"
+    },
+    "passos": {
+      "selo": "SEM COMPLICAÇÃO",
+      "titulo": "Seu pedido em",
+      "destaque": "3 passos.",
+      "titulo1": "Escolha",
+      "descricao1": "Explore o catálogo e selecione suas bebidas favoritas.",
+      "titulo2": "Finalize",
+      "descricao2": "Confira os produtos e preencha os dados do pedido.",
+      "titulo3": "Pague no Pix",
+      "descricao3": "Escaneie o QR Code e acompanhe a confirmação."
+    },
+    "botoes": {
+      "catalogo": "Explorar catálogo",
+      "comoFunciona": "Como funciona",
+      "checkout": "Continuar para o checkout",
+      "gerarPix": "Gerar QR Code Pix",
+      "copiarPix": "Copiar Pix",
+      "cancelarPedido": "Cancelar pedido e Pix",
+      "meusPedidos": "Meus pedidos",
+      "continuarComprando": "Continuar comprando",
+      "voltarLoja": "Voltar à loja",
+      "limparBusca": "Limpar busca",
+      "adicionar": "Adicionar",
+      "confirmarIdade": "Sim, tenho 18 anos ou mais",
+      "recusarIdade": "Não tenho 18 anos",
+      "voltarCarrinho": "Voltar ao carrinho"
+    },
+    "checkout": {
+      "titulo": "Finalizar pedido",
+      "seusDados": "Seus dados",
+      "modo": "Como deseja receber?",
+      "retirada": "Retirada na adega",
+      "entrega": "Entrega",
+      "maioridade": "Confirmo que sou maior de 18 anos e apresentarei documento de identificação na entrega ou retirada.",
+      "aguardando": "Aguardando pagamento",
+      "aprovado": "Pagamento aprovado! Pedido confirmado.",
+      "expirado": "Prazo encerrado. Aguardando cancelamento da cobrança.",
+      "instrucoesPix": "Abra o app do seu banco, escaneie o QR Code ou use o Pix Copia e Cola."
+    },
+    "rodape": {
+      "responsabilidade": "Beba com responsabilidade. Proibida a venda para menores de 18 anos."
+    },
+    "idade": {
+      "titulo": "Uma ótima escolha começa com responsabilidade.",
+      "descricao": "Esta loja comercializa bebidas alcoólicas. Você tem 18 anos ou mais?"
+    }
+  },
+  "funcionamento": {
+    "aberta": true,
+    "horarioConfigurado": false,
+    "horarioTexto": "Horários a definir"
+  },
+  "catalogo": {
+    "caminhoProdutos": "/produtos",
+    "imagensDiretoDoRealtime": true,
+    "atualizacaoAutomatica": true,
+    "categoriasAutomaticas": true,
+    "ordenacaoPadrao": "destaques_nome",
+    "mostrarProdutosSemPreco": true,
+    "quantidadeDestaques": 8,
+    "intervaloDestaqueMs": 3000
+  },
+  "checkout": {
+    "idadeMinima": 18,
+    "exigirMaioridade": true,
+    "exigirNome": true,
+    "exigirTelefone": true,
+    "exigirEmail": true,
+    "exigirCpf": true,
+    "maxUnidadesPorProduto": 25,
+    "maxProdutosDiferentes": 20
+  },
+  "pagamentos": {
+    "pix": {
+      "habilitado": true,
+      "provedor": "mercadopago",
+      "metodo": "pix",
+      "prazoLojaMinutos": 10,
+      "prazoMercadoPagoMinutos": 30,
+      "segredoNoServidor": "MP_ACCESS_TOKEN"
+    }
+  },
+  "retirada": {
+    "habilitada": true,
+    "instrucoes": "Confirme a disponibilidade e o endereço com a adega antes da retirada."
+  },
+  "entrega": {
+    "habilitada": false,
+    "taxa": 0,
+    "pedidoMinimo": 0,
+    "descricao": "Entrega ainda não configurada",
+    "tempoEstimadoMinutos": 0,
+    "raioAtendimentoKm": 0
+  },
+  "tags": {
+    "tag1": "18+",
+    "tag2": "Seleção especial",
+    "tag3": "Pix na hora"
+  },
+  "tiposProduto": {
+    "garrafa": {
+      "nome": "Garrafa",
+      "icone": "wine",
+      "ativo": true
+    },
+    "combo": {
+      "nome": "Combo",
+      "icone": "package",
+      "ativo": true
+    },
+    "alcoolico": {
+      "nome": "Alcoólico • 18+",
+      "icone": "shield-check",
+      "ativo": true
+    },
+    "saborizado": {
+      "nome": "Saborizado",
+      "icone": "citrus",
+      "ativo": true
+    },
+    "cigarro": {
+      "nome": "Cigarro • 18+",
+      "icone": "cigarette",
+      "ativo": true
+    },
+    "energetico": {
+      "nome": "Energético",
+      "icone": "zap",
+      "ativo": true
+    },
+    "sem_alcool": {
+      "nome": "Sem álcool",
+      "icone": "glass-water",
+      "ativo": true
+    },
+    "lata": {
+      "nome": "Lata",
+      "icone": "beer",
+      "ativo": true
+    }
+  }
+}
