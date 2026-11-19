@@ -14,6 +14,7 @@ const {createMotoboy}=require('./motoboy');
 const {createTracking}=require('./tracking');
 const {createResourceApi}=require('./resource-api');
 const {createEventsApi}=require('./events-api');
+const {handleCors}=require('./cors');
 const CACHE = new Map(), RATE = new Map();
 let firebaseDb;
 const configRef = () => database().ref('configuracoes');
@@ -273,19 +274,8 @@ const tracking=createTracking({database,admin,send,bodyJSON,authorizedOrder,apiA
 const motoboy=createMotoboy({database,admin,send,bodyJSON,tracking,apiAuth:central.auth});
 async function handle(req,res){
   const url=new URL(req.url||'/', 'http://localhost'),p=url.pathname;
-  // CORS restrito aos domínios explicitamente configurados. Android (sem Origin) continua funcionando.
-  const origin=String(req.headers.origin||'');
-  if(origin){
-    const accepted=(process.env.ADEGA_CORS_ORIGINS||'').split(',').map(x=>x.trim()).filter(Boolean);
-    if(!accepted.includes(origin))throw error(403,'Origem não autorizada. Configure ADEGA_CORS_ORIGINS.');
-    res.setHeader('Access-Control-Allow-Origin',origin);
-    res.setHeader('Vary','Origin');
-  }
-  if(req.method==='OPTIONS'){
-    res.writeHead(204,{'Access-Control-Allow-Methods':'GET,POST,PUT,PATCH,DELETE,OPTIONS',
-       'Access-Control-Allow-Headers':'Content-Type,Authorization,X-Cron-Secret',
-       'Access-Control-Max-Age':'600'});return res.end();
-  }
+  // CORS da Adega24: origens públicas, domínios autorizados e testador local.
+  if(handleCors(req,res,p))return;
   if(p.startsWith('/api/v1/dados/'))return resources.handle(req,res,p);
   if(p.startsWith('/api/v1/eventos/'))return events.handle(req,res,p);
   if(p.startsWith('/api/v1/'))return central.handle(req,res,p);
